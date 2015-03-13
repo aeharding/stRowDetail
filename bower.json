@@ -1,0 +1,28 @@
+{
+  "name": "stRowDetail",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aeharding/stRowDetail",
+  "authors": [
+    "Alexander Harding <aeharding@gmail.com>"
+  ],
+  "description": "An Angular directive for drilling into Smart-Table rows for further information.",
+  "keywords": [
+    "Smart-Table",
+    "angular-smart-table",
+    "extension",
+    "st-row-detail",
+    "angular"
+  ],
+  "license": "The Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-smart-table": "~2.0.1",
+    "bootstrap": "~3.3.2"
+  }
+}

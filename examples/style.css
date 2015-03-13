@@ -1,0 +1,41 @@
+st-row-slave {
+  overflow: hidden;
+  display: block;
+}
+st-row-slave > div {
+  padding: 8px;
+}
+
+tr:not([st-row-master]) td {
+  border-top: none !important;
+}
+
+.st-row-open {
+  border-left: 6px solid #0085c3;
+}
+
+.table > tbody > tr.slave-row > td {
+  padding: 0;
+  margin: 0;
+}
+
+.master-row {
+  cursor: pointer;
+}
+
+
+
+
+.cui-collapse {
+  display: none;
+}
+.cui-collapse.cui-in {
+  display: block;
+}
+
+.cui-collapsing {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: height 250ms ease;
+}
