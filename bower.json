@@ -1,6 +1,6 @@
 {
   "name": "stRowDetail",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/aeharding/stRowDetail",
   "authors": [
     "Alexander Harding <aeharding@gmail.com>"
@@ -13,13 +13,15 @@
     "st-row-detail",
     "angular"
   ],
+  "main": "dist/stRowDetail.js",
   "license": "The Unlicense",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "src",
+    "examples"
   ],
   "dependencies": {
     "angular-smart-table": "~2.0.1",

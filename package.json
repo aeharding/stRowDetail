@@ -1,6 +1,6 @@
 {
   "name": "stRowDetail",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An Angular directive for drilling into Smart-Table rows for further information.",
   "main": "gulpfile.js",
   "directories": {
