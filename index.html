@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="../bower_components/angular/angular.js"></script>
+    
+    <script src="../bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <script src="script.js"></script>
+    <script src="../bower_components/angular-st-row-detail/dist/stRowDetail.js"></script>
+  </head>
+
+  <body ng-controller="mainCtrl">
+    <h2>stRowDetail example</h2>
+    <table st-table="rowCollection" class="table">
+      <thead>
+      <tr>
+        <th st-sort="firstName">first name</th>
+        <th st-sort="lastName">last name</th>
+        <th st-sort="birthDate">age</th>
+        <th st-sort="balance">balance</th>
+        <th>email</th>
+      </tr>
+      <tr>
+        <th>
+          <input st-search="'firstName'" placeholder="search for firstname" class="input-sm form-control" type="search"/>
+        </th>
+        <th colspan="4">
+          <input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat-start="row in rowCollection" st-row-master="row.open" class="master-row">
+        <td>{{row.firstName | uppercase}}</td>
+        <td>{{row.lastName}}</td>
+        <td>{{row.age}}</td>
+        <td>{{row.balance | currency}}</td>
+        <td><a ng-href="mailto:{{row.email}}">email</a></td>
+      </tr>
+      <tr ng-repeat-end class="slave-row">
+        <td colspan="5">
+          <st-row-slave open="row.open" cui-collapse="!row.open"  cui-collapse-skip-initial="true">
+            <div class="btn-group btn-group-xs" role="group" aria-label="...">
+              <button class="btn btn-default">Some action</button>
+              <button class="btn btn-danger">Remove this user</button>
+            </div>
+          </st-row-slave>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5" class="text-center">
+            <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
